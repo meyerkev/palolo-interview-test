@@ -40,13 +40,7 @@ EOF
     default = "private"
 }
 
-# Note: In a perfect world, the resource policy would retroactively include the bucket objects and name
-# Since that perfect world doesn't actually exist, the answer is that this policy is scoped to our bucket and objects
-# by way of being a resource policy
-variable "bucket_policy" {
-    type = string
-    description = "A json blob of an existing poilcy to attach as a resource policy on the bucket"
-    default = null
-}
+# TODO: It may prove true that bucket policies and policy grants in particular can be standardized enough to make inputs be practical
+# For now, I'm going to leave this as a TODO
 
 # TODO: Possibly allow bucket lifecycles
